@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- 数据源信息  druid -->
+
+
+		<property name="driverClassName">com.mysql.jdbc.Driver</property>
+		<property name="url">jdbc:mysql:///personalblog?serverTimeZone=UTC</property>
+		<property name="username">root</property>
+		<property name="password">123456</property>
+
+		<!-- 数据库的方言 -->
+		<!-- <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property> -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 将hibernate生成的sql语句打印单控制台 -->
+		<property name="hibernate.show_sql">true</property>
+
+		<!-- 格式化hibernate生成的sql语句 -->
+		<property name="hibernate.format_sql">true</property>
+
+
+		<property name="hibernate.connection.provider_class">
+			com.alibaba.druid.support.hibernate.DruidConnectionProvider
+		</property>
+
+
+
+		<!-- 引入映射 -->
+		<mapping resource="com/sunny/domain/User.hbm.xml" />
+
+
+
+
+	</session-factory>
+
+
+
+</hibernate-configuration>

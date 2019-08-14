@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.sunny.domain">
+	<class name = "User" table="user">
+		<id name="id">
+			
+		</id>
+		
+		<property name="username" column="username"></property>
+		<property name="password" column="password"></property>
+		<property name="create_time" column="create_time"></property>
+		<property name="user_imgurl" column="user_imgurl"></property>
+		<property name="user_desc" column="user_desc"></property>
+		<property name="readnum" column="readnum"></property>
+		<property name="like" column="like"></property>
+		
+		
+	
+	
+	</class>
+
+</hibernate-mapping>
